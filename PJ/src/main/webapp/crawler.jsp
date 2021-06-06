@@ -40,28 +40,41 @@
 	//Iterator을 사용하여 하나씩 값 가져오기
 	Iterator<Element> ie1 = element.select("div.JheGif.nDgy9d").iterator();
 	Iterator<Element> ie2 = element.select("div.Y3v8qd").iterator();
+	Iterator<Element> ie3 = element.select("a").iterator();
+
+	Element link1_1 = ie3.next();
+	String href1_1 = link1_1.attr("href");
+	
+	Element link2_1 = ie3.next();
+	String href2_1 = link2_1.attr("href");
+
+	Element link3_1 = ie3.next();
+	String href3_1 = link3_1.attr("href");
+	
+	Element link4_1 = ie3.next();
+	String href4_1 = link4_1.attr("href");
 %>
 	
 	<div class="news">
-		<a href="https://www.google.com/search?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&oq=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&aqs=chrome..69i57j35i39l2j0i131i433l2j69i61j69i60j69i61.1427j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+		<a href="<%= href1_1 %>" target="_blank">
 			<h2><%= ie1.next().text() %></h2>
 			<h5><%= ie2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news">
-		<a href="https://www.google.com/search?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&oq=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&aqs=chrome..69i57j35i39l2j0i131i433l2j69i61j69i60j69i61.1427j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+		<a href="<%= href2_1 %>" target="_blank">
 			<h2><%= ie1.next().text() %></h2>
 			<h5><%= ie2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news">
-		<a href="https://www.google.com/search?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&oq=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&aqs=chrome..69i57j35i39l2j0i131i433l2j69i61j69i60j69i61.1427j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+		<a href="<%= href3_1 %>" target="_blank">
 			<h2><%= ie1.next().text() %></h2>
 			<h5><%= ie2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news">
-		<a href="https://www.google.com/search?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&oq=%EC%BD%94%EB%A1%9C%EB%82%98+%EB%89%B4%EC%8A%A4&aqs=chrome..69i57j35i39l2j0i131i433l2j69i61j69i60j69i61.1427j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+		<a href="<%= href4_1 %>" target="_blank">
 			<h2><%= ie1.next().text() %></h2>
 			<h5><%= ie2.next().text() %></h5> <br>
 		</a>
