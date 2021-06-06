@@ -9,6 +9,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="apiData.js?ver=2"></script>
+	<style>
+		html {height:100%;}
+		body { margin: 0; height:100%; }
+		hr {margin:0;}
+		#back-to-top {
+		    position: fixed;
+		    bottom: 25px;
+		    right: 25px;
+		    display: none;
+		}
+	</style>
 </head>
 <body>
 	<!-- Nav -->
@@ -202,34 +213,79 @@
 	<hr id="main_5">
 	
 	<!-- 주요 사이트 -->
-	<div class="container-fluid px-4 mt-5">
+	<div class="container-fluid px-4 mt-5" id="site">
 		<div class="col-xl-12 col-md-12 text-center">
-			<h1>관련 사이트</h1>
+			<h1>코로나19 관련 사이트</h1>
 		</div>
-		<div class="row justify-content-center mt-5" style="width: 80%; margin: 0 auto;">
-			<div>질병관리청</div>
-			<div>예방접종센터</div>
-			<div>코로나19 실시간상황판</div>
-			<div>코로나19 예방접종</div>
+		<div class="row align-items-center text-center my-5">
+			<div class="col-md-3 col-sm-12 my-3">
+				<div class="card h-100">
+					<a href="http://www.kdca.go.kr/" target="_blank">
+						<img class="card-img-top" src="media/link1.jpg" alt="link_img">
+					</a>
+					<div class="card-body p-4">
+						<h5 class="fw-bolder">질병관리청</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12 my-3">
+				<div class="card h-100">
+					<a href="https://ncvr.kdca.go.kr/cobk/index.html" target="_blank">
+						<img class="card-img-top" src="media/link2.jpg" alt="link_img">
+					</a>
+					<div class="card-body p-4">
+						<h5 class="fw-bolder">코로나19 예방접종 사전예약</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12 my-3">
+				<div class="card h-100">
+					<a href="https://www.0404.go.kr/m/dev/main.do" target="_blank">
+						<img class="card-img-top" src="media/link3.jpg" alt="link_img">
+					</a>
+					<div class="card-body p-4">
+						<h5 class="fw-bolder">외교부 해외안전여행</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12 my-3">
+				<div class="card h-100">
+					<a href="http://www.mohw.go.kr/react/index.jsp" target="_blank">
+						<img class="card-img-top" src="media/link4.jpg" alt="link_img">
+					</a>
+					<div class="card-body p-4">
+						<h5 class="fw-bolder">보건복지부</h5>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 보건복지부 http://www.mohw.go.kr/react/index.jsp -->
 		</div>
 	</div>
 	<hr>
 	
-	<footer>  
+	<footer class="p-1 mx-auto mt-5">
 		<div class="container">
-			<p class="float-end mt-3">
-				<a href="#" style="color:red;">Back to top</a>
-			</p>
-			<p class="mb-1">Stream</p>
-			<p class="mb-1">Developer: Junggwon Kim / Email: jyhkjg69@gmail.com</p>
-			<p class="mb-1">Stream</p>
-			<p class="mb-1">2021 Capstone Design / <a href="https://github.com/hallymsw/2021_1_CapstoneDesign" target="_blank" style="color:blue;">2021 Capstone github link</a>.</p>
-			<p class="mb-0">copyright &copy; HALLYM University All rights reserved.</p>
+			<div class="row">
+				<div class="col-xl-4">
+					<a href="#">
+						<img class="img-fluid img-brand d-block mx-auto" src="media/logo.jpg" alt="logo_image" />
+					</a>
+				</div>
+				<div class="col-xl-5 ml-5">
+					<p class="mb-1"><u>Stream</u></p>
+					<p class="mb-1">Developer: Junggwon Kim / Email: jyhkjg69@gmail.com</p>
+					<p class="mb-1">2021 Capstone Design / <a href="https://github.com/hallymsw/2021_1_CapstoneDesign" target="_blank" style="color:blue;">2021 Capstone github link</a>.</p>
+					<p class="mb-0">copyright &copy; HALLYM University All rights reserved.</p>
+				</div>
+				<div class="col-xl-1">
+					<p class="float-end">
+					<a href="#" style="color:red;">Top</a>
+					</p>
+				</div>
+			</div>
 		</div>
 	</footer>
-	
-	
-	
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
