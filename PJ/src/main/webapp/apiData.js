@@ -1,6 +1,6 @@
 
 	$.ajax({
-		url: 'Data.do',
+		url: 'Data.do', // 'Data'
 		type: 'get',
 		dataType: 'xml',
 		success: function(data) {
@@ -10,7 +10,6 @@
 			var all_deathCnt = ''; //누적 사망자 수
 			var all_examCnt = ''; //누적 검사진행 수
 			var all_careCnt = ''; //누적 치료 중 수
-			var ch = '';
 			
             $(data).find('item').each(function() {
 				document.body.innerHTML += '<br>';
@@ -40,11 +39,11 @@
 					$('#all_exam').append(all_examCnt + '명');
 					$('#all_care').append(all_careCnt + '명');
 				} else { //어제 대비 당일 증가 수
-					$('#decide').append(all_decideCnt - decideCnt + ((all_decideCnt - decideCnt > 0) ? '▲' : '-'));
-					$('#clear').append(all_clearCnt - clearCnt + ((all_clearCnt - clearCnt > 0) ? '▲' : '-'));
-					$('#death').append(all_deathCnt - deathCnt + ((all_deathCnt - deathCnt > 0) ? '▲' : '-'));
-					$('#exam').append(all_examCnt - examCnt + ((all_examCnt - examCnt > 0) ? '▲' : '-'));
-					$('#care').append(all_careCnt - careCnt + ((all_careCnt - careCnt > 0) ? '▲' : '-'));
+					$('#decide').append(all_decideCnt - decideCnt + ((all_decideCnt - decideCnt >= 0) ? '▲' : '▼'));
+					$('#clear').append(all_clearCnt - clearCnt + ((all_clearCnt - clearCnt >= 0) ? '▲' : '▼'));
+					$('#death').append(all_deathCnt - deathCnt + ((all_deathCnt - deathCnt >= 0) ? '▲' : '▼'));
+					$('#exam').append(all_examCnt - examCnt + ((all_examCnt - examCnt >= 0) ? '▲' : '▼'));
+					$('#care').append(all_careCnt - careCnt + ((all_careCnt - careCnt >= 0) ? '▲' : '▼'));
 				}
             });
 		},

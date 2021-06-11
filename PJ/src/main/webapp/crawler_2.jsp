@@ -41,38 +41,38 @@
 	Iterator<Element> ie2_2 = element2.select("div.news_dsc").iterator(); //sub
 	Iterator<Element> ie3_2 = element2.select("a.news_tit").iterator(); //link
 	
-	Element link1 = ie3_2.next();
-	String href1 = link1.attr("href");
+	Element link1_2 = ie3_2.next();
+	String href1_2 = link1_2.attr("href");
 	
-	Element link2 = ie3_2.next();
-	String href2 = link2.attr("href");
+	Element link2_2 = ie3_2.next();
+	String href2_2 = link2_2.attr("href");
 	
-	Element link3 = ie3_2.next();
-	String href3 = link3.attr("href");
+	Element link3_2 = ie3_2.next();
+	String href3_2 = link3_2.attr("href");
 	
-	Element link4 = ie3_2.next();
-	String href4 = link4.attr("href");
+	Element link4_2 = ie3_2.next();
+	String href4_2 = link4_2.attr("href");
 %>
 	<div class="news2">
-		<a href="<%= href1 %>" target="_blank">
+		<a href="<%= href1_2 %>" target="_blank">
 			<h2><%= ie1_2.next().text() %></h2>
 			<h5><%= ie2_2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news2">
-		<a href="<%= href2 %>" target="_blank">
+		<a href="<%= href2_2 %>" target="_blank">
 			<h2><%= ie1_2.next().text() %></h2>
 			<h5><%= ie2_2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news2">
-		<a href="<%= href3 %>" target="_blank">
+		<a href="<%= href3_2 %>" target="_blank">
 			<h2><%= ie1_2.next().text() %></h2>
 			<h5><%= ie2_2.next().text() %></h5> <br>
 		</a>
 	</div>
 	<div class="news2">
-		<a href="<%= href4 %>" target="_blank">
+		<a href="<%= href4_2 %>" target="_blank">
 			<h2><%= ie1_2.next().text() %></h2>
 			<h5><%= ie2_2.next().text() %></h5> <br>
 		</a>

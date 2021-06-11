@@ -53,10 +53,10 @@
 					</div>
 			    </li>
 				<li class="nav-item">
-					<a class="nav-link active" href="community.jsp"><b>Community</b> <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="community.jsp"><b>Community</b> <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="check.jsp"><b>Self-check</b></a>
+					<a class="nav-link active" href="check.jsp"><b>Self-check</b></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link disabled" href="http://gwonk.iptime.org:98/vnc.html" target="_blank"><b>관리자 페이지</b></a>
@@ -69,113 +69,64 @@
 	<header>
 		<div class="container-fluid px-4 mt-5">
 			<div class="col-xl-12 col-md-12 text-center" style="margin-top: 12em; margin-bottom: 8em">
-				<h1>[ 커뮤니티 게시판 ]</h1>
+				<h1>[ 코로나19 자가진단 결과 ]</h1>
 			</div>
 			<hr id="hr_line">
 		</div>
 	</header>
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	int yes = 0;
 
-
-	<div class="container-fluid px-5 my-5 w-80" >
-		<table class="table table-hover text-center">
-			<thead>
-			<tr style="background-color: #CFC4FF;">
-				<th>번호</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>날짜</th>
-				<th>조회수</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td class="col-md-1">10</td>
-				<td class="col-md-5">테이블 디자인입니다.</td>
-				<td class="col-md-2">ㅇㅇ</td>
-				<td class="col-md-2">16:03</td>
-				<td class="col-md-2">0</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">9</td>
-				<td class="col-md-5">추후 DB테이블 연결 예정입니다.</td>
-				<td class="col-md-2">ㅇㅇ</td>
-				<td class="col-md-2">2021-06-07</td>
-				<td class="col-md-2">0</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">8</td>
-				<td class="col-md-5">데이터베이스 연결 안 된 게시판입니다.</td>
-				<td class="col-md-2">팩트</td>
-				<td class="col-md-2">2021-06-05</td>
-				<td class="col-md-2">3</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">7</td>
-				<td class="col-md-5">'이것'먹으면 면역력 높아진다!</td>
-				<td class="col-md-2">광고아님</td>
-				<td class="col-md-2">2021-06-05</td>
-				<td class="col-md-2">8</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">6</td>
-				<td class="col-md-5">자가격리 13일차</td>
-				<td class="col-md-2">어이쿠</td>
-				<td class="col-md-2">2021-06-05</td>
-				<td class="col-md-2">68</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">5</td>
-				<td class="col-md-5">코로나19 공공데이터활용 공모전!</td>
-				<td class="col-md-2">갭알자</td>
-				<td class="col-md-2">2021-06-05</td>
-				<td class="col-md-2">26</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">4</td>
-				<td class="col-md-5">치료제 접종 후기</td>
-				<td class="col-md-2">주사따끔</td>
-				<td class="col-md-2">2021-06-04</td>
-				<td class="col-md-2">84</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">3</td>
-				<td class="col-md-5">백신 정보 공유합니다</td>
-				<td class="col-md-2">코로롱</td>
-				<td class="col-md-2">2021-06-03</td>
-				<td class="col-md-2">32</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">2</td>
-				<td class="col-md-5">코로나19 증상 질문</td>
-				<td class="col-md-2">유저1</td>
-				<td class="col-md-2">2021-06-03</td>
-				<td class="col-md-2">16</td>
-			</tr>
-			<tr>
-				<td class="col-md-1">1</td>
-				<td class="col-md-5">테스트 페이지 입니다</td>
-				<td class="col-md-2">관리자</td>
-				<td class="col-md-2">2021-06-01</td>
-				<td class="col-md-2">3</td>
-			</tr>
-			</tbody>
-		</table>
-		
-		<hr/>
-		<div class="text-right">
-			<button type="button" class="btn btn-default">글쓰기</button>
-		</div>
-		<ul class="pagination justify-content-center">
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary"><</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">1</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">2</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">3</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">4</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">5</a></li>
-			<li><a href="#" style="margin-right: 20px;" class="text-secondary">></a></li>
-		</ul>
+	String msg;
+	String notice;
+	String q1 = request.getParameter("q1");
+	String q2 = request.getParameter("q2");
+	String q3 = request.getParameter("q3");
+	String q4 = request.getParameter("q4");
+	String q5 = request.getParameter("q5");
+	String q6 = request.getParameter("q6");
+	String q7 = request.getParameter("q7");
+	String q8 = request.getParameter("q8");
+	
+	if(q1.equalsIgnoreCase("예"))
+		yes++;
+	if(q2.equalsIgnoreCase("예"))
+		yes++;
+	if(q3.equalsIgnoreCase("예"))
+		yes++;
+	if(q4.equalsIgnoreCase("예"))
+		yes++;
+	if(q5.equalsIgnoreCase("예"))
+		yes++;
+	if(q6.equalsIgnoreCase("예"))
+		yes++;
+	if(q7.equalsIgnoreCase("예"))
+		yes++;
+	if(q8.equalsIgnoreCase("예"))
+		yes++;
+	
+	if (yes < 3) {
+		msg = "무증상";
+		notice = "코로나19 감염에서 안전한 상태입니다. 꾸준히 청결 관리에 신경쓰십시오.";
+	}
+	else if (yes < 5) {
+		msg = "의심증상";
+		notice = "코로나19 감염이 의심되는 상태입니다. 가까운 선별진료소를 방문하셔서 검사받기를 권장합니다.";
+	}
+	else {
+		msg = "코로나19 감염증상";
+		notice = "코로나19 감염 증상과 흡사합니다. 검사를 받은 뒤 자가격리하시기를 권장합니다.";
+	}
+%>
+	
+	<div class="container-fluid px-4 mt-5 text-center">
+		<h2 style="color:red; margin-top: 100px;"> <%= msg %></h2><br>
+		<h2 style="color:blue; margin-bottom: 30px;"> <%= notice %></h2><br>
+		<input type="button" value="돌아가기" class="btn btn-success btn-lg mb-5" onclick="location.href='check.jsp'" />
 	</div>
-
+	
 
 	<hr>
 	<!-- footer -->

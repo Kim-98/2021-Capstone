@@ -8,10 +8,12 @@
 	<title>Stream</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-	<script type="text/javascript" src="apiData.js?ver=2"></script>
+	<script type="text/javascript" src="apiData.js?ver=1"></script>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Serif+KR:wght@300;400;700&display=swap');
 		html {height:100%;}
-		body { margin: 0; height:100%; }
+		body { margin: 0; height:100%; font-family: 'Nanum Gothic', sans-serif; }
+		h1 {font-family: 'Noto Serif KR', serif; font-weight: bold; }
 		hr {margin:0;}
 		#back-to-top {
 		    position: fixed;
@@ -19,12 +21,20 @@
 		    right: 25px;
 		    display: none;
 		}
+		#carousel:hover { opacity: 0.8; }
+		.carousel-caption {
+			font-family: 'Noto Serif KR', serif;
+		}
+		#carousel_1 { color:black; }
+		#carousel_2 { color:#FF5E07; }
+		#carousel_3 { color:blue; }
+		img.card-img-top:hover { opacity: 0.6; transition-duration: 0.5s;}
 	</style>
 </head>
 <body>
 	<!-- Nav -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light text-uppercase fixed-top"><!-- navbar navbar-expand-lg navbar-light bg-light -->
-  		<a class="navbar-brand ml-3" href="index.jsp"><h4>Stream</h4></a>
+  		<a class="navbar-brand ml-3 p-0 m-0 mt-2" href="index.jsp"><h3><b>Stream</b></h3></a>
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
   		</button>
@@ -33,7 +43,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Home
+						<b>Home</b>
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="#main_1">국내 현황</a>
@@ -45,13 +55,13 @@
 					</div>
 			    </li>
 				<li class="nav-item">
-					<a class="nav-link" href="community.jsp">Community <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="community.jsp"><b>Community</b> <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="check.jsp">Self-check</a>
+					<a class="nav-link" href="check.jsp"><b>Self-check</b></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link disabled" href="stream.jsp" target="_blank">관리자 페이지</a>
+					<a class="nav-link disabled" href="http://gwonk.iptime.org:98/vnc.html" target="_blank"><b>관리자 페이지</b></a>
 				</li>
 			</ul>
 	    </div>
@@ -66,26 +76,38 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="media/test1.jpg" alt="img1" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>코로나 관련 문구</h3>
-                        <p>내용</p>
-                    </div>
+                <div class="carousel-item active" id="carousel">
+                	<a href="http://ncov.mohw.go.kr/infoBoardView.do?brdId=3&brdGubun=32&dataGubun=321&ncvContSeq=1079&contSeq=1079&board_id=&gubun=" target="_blank">
+	                    <img class="d-block w-100" src="media/test1.jpg" alt="img1" />
+	                    <div class="carousel-caption d-none d-md-block">
+	                    	<div id="carousel_1">
+		                        <h2>함께 지키는 코로나19 예방행동수칙</h2>
+		                        <h5>일반국민 고위험군 유증상자 국내 코로나19 유행지역 예방행동수칙</h5>
+	                        </div>
+	                    </div>
+                    </a>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="media/test2.jpg" alt="img2" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>코로나 관련 문구</h3>
-                        <p>내용</p>
-                    </div>
+                <div class="carousel-item" id="carousel">
+                	<a href="http://ncov.mohw.go.kr/shBoardView.do?brdId=3&brdGubun=32&ncvContSeq=569" target="_blank">
+                    	<img class="d-block w-100" src="media/test2.jpg" alt="img2" />
+	                    <div class="carousel-caption d-none d-md-block">
+	                    	<div id="carousel_2">
+		                        <h2>코로나19 증상나면 어떻게 해야 할까?</h2>
+		                        <h5>코로나19는 초기증상이 기침, 발열 등으로 시작해 감기와 유사합니다.</h5>
+		                    </div>
+	                    </div>
+                    </a>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="media/test4.jpg" alt="img3" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>코로나 관련 문구</h3>
-                        <p>내용</p>
-                    </div>
+                <div class="carousel-item" id="carousel">
+                    <a href="https://korean.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/hand-sanitizer.html" target="_blank">
+	                    <img class="d-block w-100" src="media/test4.jpg" alt="img3" />
+	                    <div class="carousel-caption d-none d-md-block">
+	                    	<div id="carousel_3">
+		                        <h2>손소독제 선택과 사용</h2>
+		                        <h5>백신 미접종자를 위한 지침</h5>
+	                        </div>
+	                    </div>
+                    </a>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -100,7 +122,7 @@
     </header>
 	<!-- 확진자 현황 -->
 	<div class="container-fluid px-4 mt-5" id="main_1">
-		<div class="col-xl-12 col-md-12 text-center">
+		<div class="col-xl-12 col-md-12 text-center fw-bold">
 			<h1>코로나19 국내 현황 </h1>(
 			<%@ page import="java.util.Date" %>
 			<% out.println(new Date().toLocaleString().substring(0,10)); %>
@@ -171,7 +193,7 @@
 	<!-- 보도 자료 -->
 	<div class="container-fluid px-4 mt-5">
 		<div class="col-xl-12 col-md-12 text-center">
-			<h1>코로나19 주요 뉴스</h1>(
+			<h1 class="fw-bold">코로나19 주요 뉴스</h1>(
 			<%@ page import="java.util.Date" %>
 			<% out.println(new Date().toLocaleString().substring(0,19)); %>
 			 기준)
@@ -264,6 +286,7 @@
 	</div>
 	<hr>
 	
+	<!-- footer -->
 	<footer class="p-1 mx-auto mt-5">
 		<div class="container">
 			<div class="row">
