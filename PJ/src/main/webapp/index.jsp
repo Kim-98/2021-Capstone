@@ -125,7 +125,7 @@
 		<div class="col-xl-12 col-md-12 text-center fw-bold">
 			<h1>코로나19 국내 현황 </h1>(
 			<%@ page import="java.util.Date" %>
-			<% out.println(new Date().toLocaleString().substring(0,10)); %>
+			<% out.println(new Date().toLocaleString().substring(0,12)); %>
 			0시 기준)
 		</div>
 		<div class="row justify-content-center mt-4">
