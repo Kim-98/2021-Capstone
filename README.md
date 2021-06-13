@@ -50,6 +50,7 @@
 > Rule: 사회적 거리 두기 단계별 기준 및 방역 조치안내 이미지. / 클릭 시 해당 페이지 이동.
 > Key Sites: 질병관리청, 코로나19 예방접종 사전예약, 외교부 해외 안전 여행, 보건복지부 사이트 이미지와 하이퍼링크 연결
 > Footer: Stream 사이트의 로고와 개발자 정보, Top 버튼으로 구성
+> 
 > ![image](https://user-images.githubusercontent.com/67696918/121801802-43c21e80-cc74-11eb-8e55-fd53e43d22b7.png)
 
 
